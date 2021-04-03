@@ -1,0 +1,30 @@
+{
+  "name": "object-parser",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "typescript",
+    "object",
+    "parser",
+    "graphql"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibash/object-parser.git"
+  },
+  "author": "Karibash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karibash/object-parser/issues"
+  },
+  "homepage": "https://github.com/Karibash/object-parser",
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
