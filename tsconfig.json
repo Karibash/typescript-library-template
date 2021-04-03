@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": false,
+    "declaration": true,
+    "sourceMap": false,
+    "pretty": true,
+    "newLine": "lf",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "out"
+  ]
+}

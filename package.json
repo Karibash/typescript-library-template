@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/Karibash/object-parser",
   "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
   "publishConfig": {
     "access": "public"
   }
