@@ -1,12 +1,9 @@
 {
-  "name": "object-parser",
+  "name": "typescript-library-template",
   "version": "1.0.0",
   "description": "",
   "keywords": [
-    "typescript",
-    "object",
-    "parser",
-    "graphql"
+    "typescript"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Karibash/object-parser.git"
+    "url": "git+https://github.com/.../...git"
   },
-  "author": "Karibash",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Karibash/object-parser/issues"
+    "url": "https://github.com/.../.../issues"
   },
-  "homepage": "https://github.com/Karibash/object-parser",
+  "homepage": "https://github.com/.../...",
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
