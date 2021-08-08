@@ -41,7 +41,7 @@ export default [
         useTsconfigDeclarationDir: true,
         tsconfigOverride: {
           compilerOptions: {
-            declarationDir: 'out/.dts',
+            declarationDir: '.build',
           },
         },
       }),
@@ -52,7 +52,7 @@ export default [
     ],
   },
   {
-    input: 'out/.dts/index.d.ts',
+    input: '.build/index.d.ts',
     plugins: [
       dts(),
     ],

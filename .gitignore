@@ -243,5 +243,6 @@ Temporary Items
 .apdisk
 
 ### Output
+.build/
 dist/
 
