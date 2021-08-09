@@ -11,9 +11,6 @@
   "types": "dist/index.d.ts",
   "jsdelivr": "dist/bundle.min.js",
   "unpkg": "dist/bundle.min.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc && tsc-alias",
