@@ -6,7 +6,11 @@
     "strict": true,
     "skipLibCheck": false,
     "declaration": true,
-    "sourceMap": false,
+    "sourceMap": true,
+    "declarationMap": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "esModuleInterop": true,
     "pretty": true,
     "newLine": "lf",
     "outDir": "dist",
@@ -19,18 +23,8 @@
     "noUnusedParameters": true,
     "baseUrl": "src",
     "paths": {
-      "*": ["*"]
-    },
-    "plugins": [
-      {
-        "transform": "@zerollup/ts-transform-paths",
-        "exclude": ["*"]
-      }
-    ]
+      "@src/*": ["*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "out"
-  ]
+  "include": ["src/**/*.ts"]
 }

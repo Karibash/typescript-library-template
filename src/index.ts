@@ -1,3 +1,1 @@
-export const helloWorld = () => {
-  console.log('hello world');
-};
+export { CoreClass } from '@src/core';
