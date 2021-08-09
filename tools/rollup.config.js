@@ -44,7 +44,7 @@ export default [
     output: [
       {
         name: packageJson.name,
-        file: `dist/bundle.js`,
+        file: `./dist/bundle.js`,
         format: 'umd',
         sourcemap: true,
         exports: 'named',
@@ -52,7 +52,7 @@ export default [
       },
       {
         name: packageJson.name,
-        file: `dist/bundle.min.js`,
+        file: `./dist/bundle.min.js`,
         format: 'umd',
         sourcemap: true,
         exports: 'named',
