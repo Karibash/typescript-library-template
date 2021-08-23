@@ -5,7 +5,10 @@ import { terser } from 'rollup-plugin-terser';
 const { entryPoints, entryPointPaths } = require('./entry-points');
 const packageJson = require('../package.json');
 
-const toRelativePathFromDist = (id, parentId) => {
+const dependencies = Object.keys(packageJson.dependencies || {});
+const devDependencies = Object.keys(packageJson.devDependencies || {});
+
+const toRelativePath = (id, parentId) => {
   const distRoot = path.resolve(__dirname, '../dist');
   if (path.isAbsolute(id)) {
     return path.relative(distRoot, id);
@@ -14,7 +17,8 @@ const toRelativePathFromDist = (id, parentId) => {
 };
 
 const isExternal = (id, parentId) => {
-  const relativePath = toRelativePathFromDist(id, parentId);
+  if (dependencies.includes(id)) return true;
+  const relativePath = toRelativePath(id, parentId);
   return entryPointPaths.includes(relativePath);
 };
 
@@ -40,7 +44,7 @@ export default [
   ...entryPoints.map(prepareBundle),
   {
     input: './dist/index.js',
-    external: [...Object.keys(packageJson.devDependencies || {})],
+    external: devDependencies,
     output: [
       {
         name: packageJson.name,
