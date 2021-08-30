@@ -7,6 +7,8 @@ const packageJson = require('../package.json');
 
 const dependencies = Object.keys(packageJson.dependencies || {});
 const devDependencies = Object.keys(packageJson.devDependencies || {});
+const peerDependencies = Object.keys(packageJson.peerDependencies || {});
+const buildDependencies = [...dependencies, ...peerDependencies];
 
 const toRelativePath = (id, parentId) => {
   const distRoot = path.resolve(__dirname, '../dist');
@@ -17,7 +19,7 @@ const toRelativePath = (id, parentId) => {
 };
 
 const isExternal = (id, parentId) => {
-  if (dependencies.includes(id)) return true;
+  if (buildDependencies.includes(id)) return true;
   const relativePath = toRelativePath(id, parentId);
   return entryPointPaths.includes(relativePath);
 };
