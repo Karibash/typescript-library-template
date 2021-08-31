@@ -8,7 +8,7 @@ const packageJson = require('../package.json');
 const dependencies = Object.keys(packageJson.dependencies || {});
 const devDependencies = Object.keys(packageJson.devDependencies || {});
 const peerDependencies = Object.keys(packageJson.peerDependencies || {});
-const buildDependencies = [...dependencies, ...peerDependencies];
+const buildDependencies = [...dependencies, ...devDependencies, ...peerDependencies];
 
 const toRelativePath = (id, parentId) => {
   const distRoot = path.resolve(__dirname, '../dist');
