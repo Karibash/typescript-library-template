@@ -16,17 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn
+      - name: Setup
+        uses: ./.github/actions/setup
 
       - name: ESLint
-        run: yarn lint
+        run: yarn lint:check
 
   test:
     name: Test
@@ -37,14 +31,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn
+      - name: Setup
+        uses: ./.github/actions/setup
 
       - name: Run tests
         run: yarn test:coverage --color
@@ -61,14 +49,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn
+      - name: Setup
+        uses: ./.github/actions/setup
 
       - name: Run dist tests
         run: yarn test:dist
