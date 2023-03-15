@@ -1,7 +1,8 @@
 {
+  "private": true,
   "name": "typescript-library-template",
   "description": "",
-  "private": true,
+  "packageManager": "yarn@3.4.1",
   "scripts": {
     "postinstall": "preconstruct dev",
     "prepare": "simple-git-hooks",
